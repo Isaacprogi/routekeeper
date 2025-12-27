@@ -27,13 +27,8 @@ function HomepageHeader() {
           <div className="flex gap-md justify-center">
             <Link
               className="button button--lg btn-primary rounded-lg px-lg py-sm font-semibold"
-              to="/docs/intro">
-              Get Started
-            </Link>
-            <Link
-              className="button button--lg btn-outline rounded-lg px-lg py-sm font-semibold"
               to="/docs">
-              View Documentation
+                View Documentation
             </Link>
           </div>
         </div>
