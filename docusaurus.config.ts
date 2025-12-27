@@ -1,11 +1,11 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Route Keeper',
-  tagline: 'Your React Route Guardian - The superhero your React app deserves! 🦸‍♂️',
-  favicon: 'img/favicon.ico',
+  tagline: 'Your React Route Guardian - The superhero your React app deserves!',
+  favicon: 'img/logo.jpg',
   trailingSlash: false,
 
   future: {
@@ -14,9 +14,9 @@ const config: Config = {
 
   // GitHub Pages deployment settings
   url: 'https://isaacprogi.github.io',
-  baseUrl: process.env.NODE_ENV === 'production' 
-  ? '/routekeeper-docs/' 
-  : '/',
+  baseUrl: process.env.NODE_ENV === 'production'
+    ? '/routekeeper-docs/'
+    : '/',
   organizationName: 'isaacprogi',
   projectName: 'routekeeper-docs',
   deploymentBranch: 'gh-pages',
@@ -55,11 +55,17 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
       defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Route Keeper',
+      logo: {
+        alt: 'Route Keeper Logo',
+        src: 'img/logo.jpg', // ← from static/img
+      },
+
       items: [
         // Simple link to docs
         {
@@ -113,7 +119,7 @@ const config: Config = {
             },
             {
               label: 'MIT License',
-              href: 'https://opensource.org/licenses/MIT',
+              href: 'https://github.com/Isaacprogi/routekeeper-react/blob/main/LICENSE',
             },
           ],
         },
