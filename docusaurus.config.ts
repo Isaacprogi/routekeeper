@@ -2,31 +2,30 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'Route Keeper',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Your React Route Guardian - The superhero your React app deserves! 🦸‍♂️',
   favicon: 'img/favicon.ico',
+  trailingSlash: false,
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
   // GitHub Pages deployment settings
-  url: 'https://isaacprogi.github.io', // Replace YOUR_USERNAME
-  baseUrl: '/routekeeper-docs', // Replace REPOSITORY_NAME
-  organizationName: 'isaacprogi', // Replace YOUR_USERNAME
-  projectName: 'routekeeper-docs', // Replace REPOSITORY_NAME
+  url: 'https://isaacprogi.github.io',
+  baseUrl: '/', // MUST end with slash
+  organizationName: 'isaacprogi',
+  projectName: 'routekeeper-docs',
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
-  
+  onBrokenLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,28 +36,13 @@ const config: Config = {
       'classic',
       {
         docs: {
-          // sidebarPath: './sidebars.ts',
           sidebarPath: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Remove routeBasePath: '/' - let docs be at /docs
+          // routeBasePath: 'docs', // Default is 'docs'
+          exclude: ['**/LICENSE', '**/LICENSE.md'],
+          editUrl: 'https://github.com/isaacprogi/routekeeper-docs/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -67,27 +51,28 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
+      defaultMode: 'light',
     },
     navbar: {
-      title: 'RK',
-      // logo: {
-      //   alt: 'My Site Logo',
-      //   src: 'img/logo.svg',
-      // },
+      title: 'Route Keeper',
       items: [
+        // Simple link to docs
         {
-  to: '/docs',
-  label: 'Docs',
-  position: 'right',
-}
-,
+          to: '/docs', // Link to docs at /docs
+          label: 'Documentation',
+          position: 'right',
+        },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/isaacprogi/routekeeper-react',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://www.npmjs.com/package/routekeeper-react',
+          label: 'NPM',
           position: 'right',
         },
       ],
@@ -96,10 +81,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Getting Started',
               to: '/docs',
             },
           ],
@@ -108,16 +93,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/isaacprogi/routekeeper-react',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Issues',
+              href: 'https://github.com/isaacprogi/routekeeper-react/issues',
             },
           ],
         },
@@ -125,17 +106,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'NPM Package',
+              href: 'https://www.npmjs.com/package/routekeeper-react',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'MIT License',
+              href: 'https://opensource.org/licenses/MIT',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Route Keeper by Isaac Anasonye.`,
     },
     prism: {
       theme: prismThemes.github,
