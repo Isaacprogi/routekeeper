@@ -18,6 +18,8 @@ import {
   FiSettings,
   FiCheckCircle,
   FiArrowRight,
+  FiAlertTriangle,
+  FiGitMerge
 } from "react-icons/fi";
 
 function ScrollToSection({
@@ -287,41 +289,42 @@ function FeaturesSection() {
   const features = [
     {
       icon: <FiLock />,
-      title: "Route Protection",
+      title: "Protected & Public Routes",
       description:
-        "Protect routes based on user roles and permissions with a simple API.",
+        "Easily define private, public, and neutral routes with automatic redirects based on authentication state.",
     },
     {
       icon: <FiUsers />,
       title: "Role-Based Access Control",
       description:
-        "Define roles and permissions with granular control over access levels.",
+        "Restrict access using roles with inheritance, overrides, and fine-grained permission control.",
     },
     {
-      icon: <FiSettings />,
-      title: "Customizable Middleware",
+      icon: <FiGitMerge />,
+      title: "Nested Route Inheritance",
       description:
-        "Extend functionality with custom middleware for complex authentication flows.",
+        "Child routes intelligently inherit access rules and roles from parent routes by default.",
     },
     {
       icon: <FiCheckCircle />,
-      title: "TypeScript Support",
+      title: "Type-Safe Route Configuration",
       description:
-        "Full TypeScript support with comprehensive type definitions.",
+        "Fully typed route definitions with strong TypeScript guarantees and compile-time safety.",
+    },
+    {
+      icon: <FiAlertTriangle />,
+      title: "Built-in Fallbacks & Guards",
+      description:
+        "Includes loading states, unauthorized screens, not-found handling, and error boundaries out of the box.",
     },
     {
       icon: <FiZap />,
-      title: "Zero Config",
+      title: "React Router v6+ Ready",
       description:
-        "Sensible defaults with zero configuration required to get started.",
-    },
-    {
-      icon: <FiCode />,
-      title: "React 18 Ready",
-      description:
-        "Built with React 18 and compatible with all modern React features.",
+        "Built on top of React Router v6+, supporting nested routes, index routes, and modern routing patterns.",
     },
   ];
+
 
   return (
     <section
@@ -333,7 +336,7 @@ function FeaturesSection() {
           <h2
             className={clsx("text-display-md font-bold mb-sm ", styles.heading)}
           >
-            Powerful Features
+            Good Features
           </h2>
           <p className={clsx("text-lg max-w-3xl mx-auto", styles.textMuted)}>
             Everything you need to build secure, scalable React applications
@@ -380,7 +383,7 @@ function CTASection() {
         </p>
         <Link
           className={clsx("button button--lg btn-primary", styles.btnPrimary)}
-          to="/docs/intro"
+          to="/docs"
         >
           Get Started <FiArrowRight className="ml-2" />
         </Link>
