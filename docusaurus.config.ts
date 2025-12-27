@@ -14,7 +14,9 @@ const config: Config = {
 
   // GitHub Pages deployment settings
   url: 'https://isaacprogi.github.io',
-  baseUrl: '/', // MUST end with slash
+  baseUrl: process.env.NODE_ENV === 'production' 
+  ? '/routekeeper-docs/' 
+  : '/',
   organizationName: 'isaacprogi',
   projectName: 'routekeeper-docs',
   deploymentBranch: 'gh-pages',
