@@ -10,11 +10,9 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
 import {
-  FiShield,
   FiLock,
   FiUsers,
   FiZap,
-  FiCode,
   FiSettings,
   FiCheckCircle,
   FiArrowRight,
@@ -115,7 +113,7 @@ function HomepageHeader() {
                 "button button--lg btn-primary",
                 styles.btnPrimary
               )}
-              to="/docs/intro"
+              to="/docs"
             >
               Get Started <FiArrowRight className="ml-2" />
             </Link>

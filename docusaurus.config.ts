@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Route Keeper',
-  tagline: 'Your React Route Guardian - The superhero your React app deserves!',
+  tagline: 'RouteKeeper — A React RouteGuard component for role-based and protected routing.',
   favicon: 'img/logo.jpg',
   trailingSlash: false,
 
@@ -15,10 +15,10 @@ const config: Config = {
   // GitHub Pages deployment settings
   url: 'https://isaacprogi.github.io',
   baseUrl: process.env.NODE_ENV === 'production'
-    ? '/routekeeper-docs/'
+    ? '/routekeeper/'
     : '/',
   organizationName: 'isaacprogi',
-  projectName: 'routekeeper-docs',
+  projectName: 'routekeeper',
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
@@ -42,7 +42,7 @@ const config: Config = {
           // Remove routeBasePath: '/' - let docs be at /docs
           // routeBasePath: 'docs', // Default is 'docs'
           exclude: ['**/LICENSE', '**/LICENSE.md'],
-          editUrl: 'https://github.com/isaacprogi/routekeeper-docs/tree/main/',
+          editUrl: 'https://github.com/isaacprogi/routekeeper/tree/main/',
         },
         blog: false,
         theme: {
