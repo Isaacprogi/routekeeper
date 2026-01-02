@@ -95,7 +95,7 @@ const App = () => {
       <RouteKeeper
         routes={routes}
         auth={userIsLoggedIn}
-        privateFallback={<LandingPage />}
+        //privateFallback={<LandingPage />}
       />
     </BrowserRouter>
   );

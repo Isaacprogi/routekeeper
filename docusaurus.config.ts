@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Route Keeper',
-  tagline: 'RouteKeeper — A React RouteGuard component for role-based and protected routing.',
+  tagline: 'Your React Route Guardian - The superhero your React app deserves!',
   favicon: 'img/logo.jpg',
   trailingSlash: false,
 
@@ -39,8 +39,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: false,
-          // Remove routeBasePath: '/' - let docs be at /docs
-          // routeBasePath: 'docs', // Default is 'docs'
           exclude: ['**/LICENSE', '**/LICENSE.md'],
           editUrl: 'https://github.com/isaacprogi/routekeeper/tree/main/',
         },
@@ -54,6 +52,16 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      { name: 'og:title', content: 'Route Keeper' },
+      { name: 'og:description', content: 'Your React Route Guardian - The superhero your React app deserves!' },
+      { name: 'og:image', content: 'https://isaacprogi.github.io/routekeeper/img/logo.jpg' },
+      { name: 'og:url', content: 'https://isaacprogi.github.io/routekeeper/' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Route Keeper' },
+      { name: 'twitter:description', content: 'Your React Route Guardian - The superhero your React app deserves!' },
+      { name: 'twitter:image', content: 'https://isaacprogi.github.io/routekeeper/img/logo.jpg' },
+    ],
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
@@ -63,13 +71,11 @@ const config: Config = {
       title: 'Route Keeper',
       logo: {
         alt: 'Route Keeper Logo',
-        src: 'img/logo.jpg', // ← from static/img
+        src: 'img/logo.jpg',
       },
-
       items: [
-        // Simple link to docs
         {
-          to: '/docs', // Link to docs at /docs
+          to: '/docs',
           label: 'Documentation',
           position: 'right',
         },
